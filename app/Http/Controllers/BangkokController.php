@@ -10,9 +10,12 @@ class BangkokController extends Controller
 //        return 'Welcome to BangkokController';
 //    }
 
-    public function index(){
+    public function index() {
+        $htmlsyntax = '<div> kim</div>';
+
         return view('bangkok.index')
             ->with('title', 'Laravel 5 Training')
-            ->with('subtitle','An introduction to Laravel 5');
+            ->with('subtitle','An introduction to Laravel 5')
+            ->with('htmlsyntax', $htmlsyntax);
     }
 }
