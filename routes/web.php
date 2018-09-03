@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('hello', function(){
+    return 'Hello Laravel';
+});
+
+Route::get('welcome/hello','WelcomeController@hello');
