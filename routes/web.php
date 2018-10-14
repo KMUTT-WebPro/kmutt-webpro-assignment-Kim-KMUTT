@@ -27,3 +27,14 @@ Route::get('welcome/page/{id?}/{title?}',
 
 
 Route::get('bangkok','BangkokController@index');
+
+/************************************************
+                Article Controller
+ ************************************************/
+Route::resource('articles','ArticleController');
+
+/************************************************
+                Page Controller
+ ************************************************/
+Route::get('pages/about', 'PagesController@about');
+Route::get('pages/contact', 'PagesController@contact');
