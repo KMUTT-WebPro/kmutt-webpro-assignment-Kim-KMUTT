@@ -36,5 +36,5 @@ Route::resource('articles','ArticleController');
 /************************************************
                 Page Controller
  ************************************************/
-Route::get('pages/about', 'PagesController@about');
-Route::get('pages/contact', 'PagesController@contact');
+Route::get('pages/about', 'PageController@about');
+Route::get('pages/contact', 'PageController@contact');

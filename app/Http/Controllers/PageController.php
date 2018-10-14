@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Cookie;
 
-class PagesController extends Controller {
+class PageController extends Controller {
 
 
 	 public function about(){

@@ -45,7 +45,7 @@
         </div>
     </div>
 
-	{{--<a href="{{ action('PagesController@contact') }}"> --}}
+	{{--<a href="{{ action('PageController@contact') }}"> --}}
 		{{--Contact--}}
 	{{--</a>--}}
 
@@ -64,7 +64,7 @@
 
 	<br />
 	{{--{!! Html::link("pages/contact", "Contact", ["class" => "btn"]) !!}--}}
-	{{--<a href="{{ action('PagesController@contact') }}">Contact</a>--}}
+	{{--<a href="{{ action('PageController@contact') }}">Contact</a>--}}
 
 	<br />
 	{{--{!! Html::image("images/laravel.png", "alt", ["class" => "img"]) !!}--}}
