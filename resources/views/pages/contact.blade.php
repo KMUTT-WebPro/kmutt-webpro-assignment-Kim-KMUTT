@@ -7,7 +7,7 @@
     <h1>Contact Us</h1>
 </div>
 
-{{--{{ session()->pull('key2') }}--}}
+
 
 <div class="row">
     <div class="col-xs-12 col-sm-6">
@@ -21,6 +21,15 @@
             <i class="glyphicon glyphicon-phone"></i>
             080-000-0000
         </address>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <p>Test Session 1: <b>{{ $sessionData1 }}</b> </p>
+        <p>Test Session 2: <b>{{ $sessionData2 }}</b> </p>
+        <p>Test Session 3: <b>{{ session()->get('key3') }}</b> </p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+        <p>Test Cookie from Controller: <b>{{ $cookieData }}</b> </p>
     </div>
 </div>
 

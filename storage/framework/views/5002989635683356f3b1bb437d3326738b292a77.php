@@ -20,6 +20,14 @@
 </div>
 
 <div class="form-group">
+    <?php echo Form::label('tag_list', 'Tags: '); ?>
+
+    <?php echo Form::select('tag_list[]', $tag_list, null,
+    ['multiple', 'class' => 'form-control']); ?>
+
+</div>
+
+<div class="form-group">
     <?php echo Form::submit($submitButtonText, ['class'=>'btn btn-primary form-control']); ?>
 
 </div>

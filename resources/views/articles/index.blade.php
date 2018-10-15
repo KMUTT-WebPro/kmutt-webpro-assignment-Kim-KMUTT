@@ -19,6 +19,7 @@
             </div>
             <div class="card-footer">
                 <p>
+                    By <strong>{{ $article->user->name }}</strong>:&nbsp;
                     {{ $article->published_at->diffForHumans() }}
                     <span class="float-right">
                         <a href="{{ url('articles/'. $article->id) }}" class="btn btn-dark">

@@ -58,26 +58,27 @@
                             <a class="nav-link" href="{{ url('/login') }}"><i class="fas fa-sign-in-alt"></i>  Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{-- route('register') --}}"><i class="fas fa-user-plus"></i> Register</a>
+                            <a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user-plus"></i> Register</a>
                         </li>
 
                     @else
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link  dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 <i class="fas fa-user"></i>
-                                {{--{{ Auth::user()->name }} ({{Auth::user()->role->name}}) --}}
-                                Teerapong
+                                {{ Auth::user()->name }}
+                                {{--({{Auth::user()->role->name}})--}}
+                                {{--Teerapong--}}
                                 <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{-- route('logout') --}}"
+                                <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                     <i class="fas fa-sign-out-alt"></i> Logout
                                 </a>
 
-                                <form id="logout-form" action="{{-- route('logout') --}}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
                             </div>

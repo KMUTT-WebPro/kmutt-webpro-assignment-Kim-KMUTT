@@ -19,6 +19,7 @@
             </div>
             <div class="card-footer">
                 <p>
+                    By <strong><?php echo e($article->user->name); ?></strong>:&nbsp;
                     <?php echo e($article->published_at->diffForHumans()); ?>
 
                     <span class="float-right">

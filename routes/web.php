@@ -38,3 +38,7 @@ Route::resource('articles','ArticleController');
  ************************************************/
 Route::get('pages/about', 'PageController@about');
 Route::get('pages/contact', 'PageController@contact');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

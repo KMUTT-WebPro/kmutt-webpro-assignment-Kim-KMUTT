@@ -33,4 +33,17 @@ class Article extends Model
     public function scopeUnpublished($query){
         $query->where('published_at', '>', Carbon::now());
     }
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
+
+    public function tags(){
+        return $this->belongsToMany('App\Tag')
+            ->withTimestamps();
+    }
+
+    public function getTagListAttribute(){
+        return $this->tags->pluck('id');
+    }
 }

@@ -8,25 +8,21 @@
             <h1>{{ $article->title }}</h1>
         </div>
 
-        {{--<div class="card-header">--}}
-            {{--{{ $article->title }}--}}
-        {{--</div>--}}
         <div class="card-body">
             {{ $article->body }}
         </div>
 
         <div class="card-footer">
-            {{--By <strong>{{ $article->user->name }}</strong>:&nbsp;--}}
+            By <strong>{{ $article->user->name }}</strong>:&nbsp;
             {{ $article->published_at->diffForHumans() }}
 
-
-            {{--@unless($article->tags->isEmpty())--}}
-                {{--<div>--}}
-                    {{--@foreach($article->tags as $tag)--}}
-                        {{--<span class="label label-default"> {{ $tag->name }} </span> &nbsp--}}
-                    {{--@endforeach--}}
-                {{--</div>--}}
-            {{--@endunless--}}
+            @unless($article->tags->isEmpty())
+                <div>
+                    @foreach($article->tags as $tag)
+                        <span class="badge badge-info"> {{ $tag->name }} </span> &nbsp
+                    @endforeach
+                </div>
+            @endunless
         </div>
     </div>
 

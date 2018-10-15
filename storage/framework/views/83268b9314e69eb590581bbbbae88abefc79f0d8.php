@@ -58,26 +58,28 @@
                             <a class="nav-link" href="<?php echo e(url('/login')); ?>"><i class="fas fa-sign-in-alt"></i>  Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href=""><i class="fas fa-user-plus"></i> Register</a>
+                            <a class="nav-link" href="<?php echo e(route('register')); ?>"><i class="fas fa-user-plus"></i> Register</a>
                         </li>
 
                     <?php else: ?>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link  dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 <i class="fas fa-user"></i>
+                                <?php echo e(Auth::user()->name); ?>
+
                                 
-                                Teerapong
+                                
                                 <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href=""
+                                <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                    onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                     <i class="fas fa-sign-out-alt"></i> Logout
                                 </a>
 
-                                <form id="logout-form" action="" method="POST" style="display: none;">
+                                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
                                     <?php echo e(csrf_field()); ?>
 
                                 </form>
